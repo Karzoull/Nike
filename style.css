@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+     margin: 0;
+     padding: 0;
+      text-decoration: none;
+     list-style: none;
+     box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+    background-image: url(/image/bg1.png);
+    background-repeat: no-repeat;
+    background-position: center;       
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+header nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 13px;
+}
+
+header nav .logo h1 {
+    font-size: 40px;
+    color: #C81E90;
+}
+
+header nav .link a{
+    padding: 32px;
+    font-weight: 400;
+    font-size: 19px;
+    color: black;
+}
+
+header nav .icons i{
+    padding: 15px;
+    font-size: 25PX;
+}
+
+header hr {
+  margin-top: 15px;
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+header .menu_icon {
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+    font-size:40px;
+    color: rgb(0, 0, 0);
+}
+
+header .menu_icon i {
+    color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 1150px) {
+    header hr,
+    header .icons {
+        display: none;
+    }
+
+    header .logo {
+        z-index: 3;
+        margin-top: 15px;
+        margin-left: -150px;
+    }
+    /* Affiche l'icône de menu hamburger */
+    header .menu_icon {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 60px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    /* Cache les liens par défaut */
+    header nav .link {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.75);
+        z-index: 2;
+        transform: translateY(-100%); /* Cache le menu en haut de la page */
+        
+    }
+
+    header nav .link a{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    header nav .link a:hover {
+        color: #C81E90;
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+   
+    .menu-open header nav .link {
+        display: flex;
+        animation: slideDown 0.5s ease forwards;
+    }
+}
+
+.container li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
