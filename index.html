@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>nike</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+               <h1>Shoes</h1>
+            </div>
+
+            <div class="link">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Review</a>
+                <a href="#">Servises</a>
+            </div>
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            
+            <div class="menu_icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="scroll-button" onclick="scrollToSection('#service')">
+                <i class="chevron-down"></i>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <section class="container">
+        <li>
+            <div class="text">
+                <ul>
+                    <h2>NIKE</h2>
+                    <h1>Collection</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting <br>
+                        industry. Lorem Ipsum has been the industry's standard dummy text <br>
+                        ever since the 1500s, when an unknown printer took a galley of type <br>
+                        and scrambled it to make a type specimen book. It has survived not <br>
+                        only five centuries, but also the leap into electronic typesetting, <br>
+                        remaining essentially unchanged.</p>
+                    <a href="#">SHOP NOW <span></span></a>
+                </ul>
+            </div>
+
+            <div class="image">
+                <img src="/image/shoes.png" alt="">
+            </div>
+        </li>
+    </section>
+
+    <script>
+        // Sélectionne l'icône du menu et le conteneur principal du body
+        const menuIcon = document.querySelector('.menu_icon');
+        const body = document.body;
+    
+        // Ajouter un écouteur d'événements pour basculer la classe `menu-open` sur le `body`
+        menuIcon.addEventListener('click', () => {
+            // Bascule la classe `menu-open` pour afficher ou masquer le menu
+            body.classList.toggle('menu-open');
+        });
+    </script>
+    
+</body>
+</html>
