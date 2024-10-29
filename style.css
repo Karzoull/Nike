@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Pacifico&display=swap');
 * {
      margin: 0;
      padding: 0;
@@ -17,11 +17,14 @@ body {
     background-size: cover;
 }
 
+
+
 header nav{
     display: flex;
     justify-content:space-around;
     align-items: center;
     margin-top: 13px;
+    margin-left: 200px;
 }
 
 header nav .logo h1 {
@@ -60,19 +63,27 @@ header .menu_icon i {
     color: rgb(0, 0, 0);
 }
 
+header .icons a{
+    color: black;
+    transition: 0.4s ease;
+}
 
+header .icons a:hover {
+    color: rgb(252, 150, 167);
+}
 @media screen and (max-width: 1150px) {
     header hr,
     header .icons {
         display: none;
     }
 
-    header .logo {
-        z-index: 3;
-        margin-top: 15px;
-        margin-left: -150px;
-    }
-    /* Affiche l'icône de menu hamburger */
+   header .logo {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 15%;
+   }
+
     header .menu_icon {
         display: flex;
         position: absolute;
@@ -128,5 +139,155 @@ header .menu_icon i {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    gap: 200px;
 }
 
+.container .text{
+    margin-top: 200px;
+}
+
+.container li h1 {
+    letter-spacing: 40px;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 150px;
+    font-family: "Creepster";
+    margin-left: -85px;
+    margin-top: -200px;
+}
+
+.container li h2{
+    font-size: 70px;
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: -85px;
+    margin-top: -20px;
+}
+
+.container li p {
+    margin-left: -85px;
+    color: black;
+    font-size: 18PX;
+    line-height: 25px;
+    margin-top: 45px;
+}
+
+.container li .boutton {
+    margin-left: -85px;
+    margin-top: 100px;
+}
+
+.container li .boutton button {
+    background: linear-gradient(5deg, rgb(231, 109, 238), rgb(104, 22, 182));
+   color: white;
+   border: none;
+   padding: 13px 33px;
+   border-radius: 40px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    .container li  {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-top: 400px;
+        margin-left: 200px;
+    }
+ 
+    .container li .text ul {
+        display: none;
+    }
+
+    .container .image {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.products {
+    flex-wrap: wrap;
+    background-color: white;
+    height: 170vh;
+    margin-top: 100px;
+}
+
+.products .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.products .title h1 {
+    margin-top: 100px;
+}
+
+.products .cartes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 70px;
+} 
+
+.products .cartes .img {
+    margin-top: -40px;
+}
+
+.products .cartes .card {
+    border: 2px solid;
+    text-align: center;
+    border-color: #beacdb;
+    box-shadow: 5px 10px 100px rgba(0, 0, 0, 0.3);
+    padding: 60px 60px;
+    border-radius: 10px;
+}
+
+.products .cartes .card .avis {
+    color: #FFA500;
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 4px;
+}
+
+.products .cartes .card .contend h1 {
+    font-size: 40px;
+    padding-top: 30px;
+    letter-spacing: 3px;
+}
+
+.products .cartes .card .contend p {
+    margin-top: 13px;
+    color: #b6b6b6;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.products .cartes .card .contend h4 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+.products .cartes .card .contend .btn {
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.products .cartes .card .contend .btn a {
+    color: white;
+    font-size: 20px;
+}
