@@ -243,6 +243,11 @@ header .icons a:hover {
 
 .products .cartes .img {
     margin-top: -40px;
+    transition: transform 0.5s ease ;
+}
+
+.products .cartes .img:hover {
+   transform: scale(1.1);
 }
 
 .products .cartes .card {
@@ -291,3 +296,89 @@ header .icons a:hover {
     color: white;
     font-size: 20px;
 }
+
+.info_shoes {
+    background-color: white;
+   height: 90vh;
+    
+}
+
+.info_shoes .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.info_shoes .title span {
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info_shoes .contend {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.info_shoes .contend .text {
+    font-size: 20px;
+    line-height: 25px;
+    color: #976999;
+    border: 2px solid;
+    padding: 35px 50px;
+    border-radius: 20px;
+      box-shadow: 5px 10px 100px #976999b6;
+    margin-left: 100px;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.thumbnail {
+    width: 130px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    padding: 20PX 30px;
+}
+
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: purple;
+    transform: scale(1.05);
+}
+
+
+.main-image-container {
+    height: 500px;
+    width: 700px;
+    border-radius: 15px;
+    border: 3px solid purple;
+    padding: 10px 10PX;
+    background-color: #fff;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+

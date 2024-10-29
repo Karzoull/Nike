@@ -57,7 +57,7 @@
             </div>
 
             <div class="image">
-                <img src="/image/shoes.png" alt="">
+                <img src="image/shoes.png" alt="">
             </div>
         </li>
     </section>
@@ -271,6 +271,46 @@
        
         </div>
     </section>
+
+    <section class="info_shoes">
+        <div class="title">
+            <h1>WEB <span>ABOUT</span></h1>
+        </div>
+
+        <div class="contend">
+            <div class="gallery-container">
+                <div class="thumbnail-container">
+                    <img src="image/red_shoes1.png" alt="Thumbnail 1" class="thumbnail active">
+                    <img src="image/red_shoes2.png" alt="Thumbnail 2" class="thumbnail">
+                    <img src="image/red_shoes3.png" alt="Thumbnail 3" class="thumbnail">
+                    <img src="image/red_shoes4.png" alt="Thumbnail 4" class="thumbnail">
+                </div>
+                <div class="main-image-container">
+                    <img src="image/red_shoes1.png" alt="Main Image" class="main-image">
+                </div>
+            </div>
+
+            <div class="text">
+                <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has <br>
+roots in a piece of classical Latin literature from 45 BC, making it over 2000 <br>
+years old. Richard McClintock, a Latin professor at Hampden-Sydney <br>
+College in Virginia, looked up one of the more obscure Latin words, <br>
+consectetur, from a Lorem Ipsum passage, and going through the cites of <br>
+the word in classical literature, discovered the undoubtable source. Lorem <br>
+Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et <br>
+Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. <br>
+This book is a treatise on the theory of ethics, very popular during the <br>
+Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", <br>
+comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum <br>
+used since the 1500s is reproduced below for those interested. Sections <br>
+1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are <br> 
+also reproduced in their exact original form, accompanied by English <br>
+versions from the 1914 translation by H. Rackham.
+                </p>
+            </div>
+        </div>
+    </section>
     <script>
         // Sélectionne l'icône du menu et le conteneur principal du body
         const menuIcon = document.querySelector('.menu_icon');
@@ -283,5 +323,23 @@
         });
     </script>
     
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+const mainImage = document.querySelector('.main-image');
+
+// Ajoute un écouteur d'événement à chaque miniature
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+        // Change la source de l'image principale pour correspondre à la miniature cliquée
+        mainImage.src = this.src;
+        
+        // Retire la classe "active" de toutes les miniatures
+        thumbnails.forEach(tn => tn.classList.remove('active'));
+        
+        // Ajoute la classe "active" à la miniature cliquée
+        this.classList.add('active');
+    });
+});
+    </script>
 </body>
 </html>
