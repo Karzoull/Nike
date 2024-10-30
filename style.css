@@ -204,9 +204,9 @@ header .icons a:hover {
     }
 
     .container .image {
-        position: fixed;
-        top: 50%;
-        left: 50%;
+        position: relative;
+        margin-top: 700px;
+        left: 40%;
         transform: translate(-50%, -50%);
     }
 }
@@ -300,7 +300,6 @@ header .icons a:hover {
 .info_shoes {
     background-color: white;
    height: 90vh;
-    
 }
 
 .info_shoes .title {
@@ -382,3 +381,54 @@ header .icons a:hover {
     border-radius: 10px;
 }
 
+
+.review{
+    background-color: white;
+    height: 80vh;
+}
+
+.review .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.review .title span{
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.review .avis {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.review .avis .avis_card {
+    border: 1px;;
+    padding: 35px 25px; 
+     box-shadow: 5px 10px 100px rgba(0, 0, 0, 0.288);
+}
+
+.review .avis .avis_card .name {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.review .avis .avis_card .text {
+    padding-top: 20px;
+}
+
+.review .avis .avis_card .étoiles {
+    color: #FFA500;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.review .avis .avis_card .text {
+    font-size: 19px;
+}
