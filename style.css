@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Pacifico&display=swap');
 * {
      margin: 0;
@@ -431,4 +432,75 @@ header .icons a:hover {
 
 .review .avis .avis_card .text {
     font-size: 19px;
+}
+
+.services {
+    flex-wrap: wrap;
+    background-color: white;
+    padding-top: 70px;
+    height: 60vh;
+}
+
+.services .title  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+.services .title span {
+    background: linear-gradient(to right, #c72092,#6e15d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 20px;
+}
+
+.services .infos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.services .infos .info_card {
+    margin: 80px;
+    margin-top: 20px;
+}
+
+.services .infos .info_card .icons {
+   color: #FFA500;
+   font-size: 4em;
+}
+.services .infos .info_card .contend h1,
+.services .infos .info_card .contend p{
+    margin-top: 13px;
+}
+
+.services .infos .info_card .contend p {
+    color: #9F9FA1;
+}
+
+.formulaire {
+    background-image: url(image/loging_bg.png);
+    height: 100vh;
+}
+
+.formulaire .container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.formulaire .container h1 {
+    font-family: "Caveat";
+    font-size: 70px;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-left:300px;
+}
+
+.formulaire .container img {
+    margin-left: -200px;
+    height: 800px;
 }
